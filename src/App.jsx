@@ -1,22 +1,25 @@
 // App.js
 import React from "react";
 import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./layout/navbar/Navbar";
 import Home from "./pages/home/Home";
-import Portfolio from "./pages/portfolio/Portfolio";
+import Portfolio from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
+import Layout from "./layout/Layout";
 
 const App = () => {
 	return (
 		<BrowserRouter>
-			<Navbar />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/portfolio" element={<Portfolio />} />
-					<Route path="/contact" element={<Contact />} />
-				</Routes>
+			<Routes>
+				<Route path="/" element={<Layout children={<Home />} />} />
+				<Route path="/about" element={<Layout children={<About />} />} />
+				<Route
+					path="/projects"
+					element={<Layout children={<Portfolio />} />}
+				/>
+				<Route path="/contact" element={<Layout children={<Contact />} />} />
+			</Routes>
 		</BrowserRouter>
 	);
 };
