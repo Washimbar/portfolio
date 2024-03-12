@@ -1,0 +1,26 @@
+/* Sidebar.css */
+.sidebar {
+    min-width: 150px;
+    background-color: #15202b;
+    color: #fff;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-item {
+    margin-bottom: 10px;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-link:hover {
+    background-color: #555;
+}

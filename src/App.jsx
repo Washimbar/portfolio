@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import Navbar from "./layout/navbar/Navbar";
 import Home from "./pages/home/Home";
-import Portfolio from "./pages/projects/Projects";
+import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import Layout from "./layout/Layout";
@@ -16,7 +16,7 @@ const App = () => {
 				<Route path="/about" element={<Layout children={<About />} />} />
 				<Route
 					path="/projects"
-					element={<Layout children={<Portfolio />} />}
+					element={<Layout children={<Projects />} />}
 				/>
 				<Route path="/contact" element={<Layout children={<Contact />} />} />
 			</Routes>
